@@ -47,48 +47,52 @@ export default class Input extends Component {
 	render() {
 		return (
 			<React.Fragment>
-				<div className="col-sm-6 input-group mb-3">
-					<div className="input-group-prepend">
-						<span
-							className="input-group-text bg-white text-success"
+				<div className="d-flex justify-content-center">
+					<div className="col-sm-6 input-group mb-3">
+						<div className="input-group-prepend">
+							<span
+								className="input-group-text bg-white text-success"
+								style={{ border: 'solid', borderColor: 'darkgreen' }}
+								id="basic-addon1"
+							>
+								@
+							</span>
+						</div>
+						<input
+							onChange={e => {
+								this.handleUserVal(e.target.value);
+							}}
+							type="text"
+							className="form-control text-success"
+							placeholder="Username"
+							aria-label="Username"
+							aria-describedby="basic-addon1"
 							style={{ border: 'solid', borderColor: 'darkgreen' }}
-							id="basic-addon1"
-						>
-							@
-						</span>
+						/>
 					</div>
-					<input
-						onChange={e => {
-							this.handleUserVal(e.target.value);
-						}}
-						type="text"
-						className="form-control text-success"
-						placeholder="Username"
-						aria-label="Username"
-						aria-describedby="basic-addon1"
-						style={{ border: 'solid', borderColor: 'darkgreen' }}
-					/>
 				</div>
-				<div className="input-group col-sm-6">
-					<div className="input-group-prepend" />
-					<textarea
-						onChange={e => {
-							this.handleMessageVal(e.target.value);
-						}}
-						className="form-control bg-white text-success"
-						aria-label="With textarea"
-						placeholder="Say Something!"
-						style={{ border: 'solid', borderColor: 'darkgreen' }}
-					/>
-					<button
-						type="button"
-						onClick={() => {
-							this.handlePost();
-						}}
-						className="postBtn btn btn-success"
-					>
-						Post
-					</button>
+				<div className="d-flex justify-content-center">
+					<div className="input-group col-sm-6 mb-5">
+						<div className="input-group-prepend" />
+						<textarea
+							onChange={e => {
+								this.handleMessageVal(e.target.value);
+							}}
+							className="form-control bg-white text-success"
+							aria-label="With textarea"
+							placeholder="Say Something!"
+							style={{ border: 'solid', borderColor: 'darkgreen' }}
+						/>
+						<button
+							type="button"
+							onClick={() => {
+								this.handlePost();
+							}}
+							className="postBtn btn btn-success"
+						>
+							Post
+						</button>
+					</div>
 				</div>
 			</React.Fragment>
 		);

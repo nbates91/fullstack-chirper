@@ -33,7 +33,7 @@ export default class Timeline extends Component {
 				<React.Fragment key={index}>
 					<div
 						className="card col-md-3"
-						style={{ width: '18rem', border: 'solid', borderColor: 'darkgreen', margin: '0.4rem' }}
+						style={{ width: '15rem', border: 'solid', borderColor: 'darkgreen', margin: '0.4rem' }}
 					>
 						<div className="card-body">
 							<Link className="moreBtn btn btn-success" to={`/${chirp.id}`}>
@@ -49,7 +49,7 @@ export default class Timeline extends Component {
 		return (
 			<div>
 				<InputForm message={value => {}} />
-				<div className="row">{chirps}</div>
+				<div className="row d-flex justify-content-center">{chirps}</div>
 			</div>
 		);
 	}

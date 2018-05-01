@@ -34,21 +34,22 @@ export default class Chirp extends Component {
 						Home
 					</Link>
 				</div>
-				<div className="card col-md-4" style={{ width: '40rem' }}>
-					<div className="card-body">
-						<button
-							onClick={() => {
-								this.handleDel(this.state.chirp.id);
-							}}
-							className="delBtn btn btn-success"
-							style={{ marginLeft: '1rem' }}
-						>
-							X
-						</button>
-						<Link className="editBtn btn btn-success" to={`/update/${this.state.chirp.id}`}>
-							Edit
-						</Link>
-						{/* <button
+				<div className="d-flex justify-content-center">
+					<div className="card col-md-4" style={{ width: '40rem' }}>
+						<div className="card-body">
+							<button
+								onClick={() => {
+									this.handleDel(this.state.chirp.id);
+								}}
+								className="delBtn btn btn-success"
+								style={{ marginLeft: '1rem' }}
+							>
+								X
+							</button>
+							<Link className="editBtn btn btn-success" to={`/update/${this.state.chirp.id}`}>
+								Edit
+							</Link>
+							{/* <button
 							onClick={() => {
 								this.handlePut(this.state.chirp.id, this.state.chirp.user);
 							}}
@@ -56,8 +57,9 @@ export default class Chirp extends Component {
 						>
 							Edit
 						</button> */}
-						<h5 className="card-title">@{this.state.chirp.user}</h5>
-						<p className="card-text">{this.state.chirp.message}</p>
+							<h5 className="card-title">@{this.state.chirp.user}</h5>
+							<p className="card-text">{this.state.chirp.message}</p>
+						</div>
 					</div>
 				</div>
 			</React.Fragment>

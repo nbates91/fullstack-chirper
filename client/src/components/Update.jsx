@@ -45,27 +45,29 @@ export default class Update extends Component {
 						Home
 					</Link>
 				</div>
-				<div className="card col-md-4" style={{ width: '40rem' }}>
-					<div className="card-body">
-						<button
-							onClick={() => {
-								this.handlePut();
-							}}
-							className="putBtn btn btn-success"
-						>
-							Save changes
-						</button>
-						<h5 className="card-title">@{this.state.user}</h5>
-						{/* <textarea className="card-text">{this.state.message}</p> */}
-						<textarea
-							onChange={e => {
-								this.handleMessageVal(e.target.value);
-							}}
-							className="form-control bg-white text-success"
-							aria-label="With textarea"
-							value={`${this.state.message}`}
-							style={{ border: 'solid', borderColor: 'darkgreen' }}
-						/>
+				<div className="d-flex justify-content-center">
+					<div className="card col-md-4" style={{ width: '40rem' }}>
+						<div className="card-body">
+							<button
+								onClick={() => {
+									this.handlePut();
+								}}
+								className="putBtn btn btn-success"
+							>
+								Save changes
+							</button>
+							<h5 className="card-title">@{this.state.user}</h5>
+							{/* <textarea className="card-text">{this.state.message}</p> */}
+							<textarea
+								onChange={e => {
+									this.handleMessageVal(e.target.value);
+								}}
+								className="form-control bg-white text-success"
+								aria-label="With textarea"
+								value={`${this.state.message}`}
+								style={{ border: 'solid', borderColor: 'darkgreen' }}
+							/>
+						</div>
 					</div>
 				</div>
 			</React.Fragment>

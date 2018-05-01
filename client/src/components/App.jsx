@@ -13,7 +13,7 @@ export default class App extends Component {
 					<Switch>
 						<Route exact path="/" component={Home} />
 						<Route exact path="/:id" component={Chirp} />
-						<Route exacgt path="/update/:id" component={Update} />
+						<Route exact path="/update/:id" component={Update} />
 					</Switch>
 				</React.Fragment>
 			</Router>
